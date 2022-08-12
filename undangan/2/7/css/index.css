@@ -1,7 +1,16 @@
-#header-modal-text .bg {
-    background-image: url('../images/bg-83.jpg');
+#desc-text-halfbg-2 .bg-wrap {
+    background: #68BACD;
+}#desc-text-7 .bg {
+    background-image: url('../images/bg-32.jpg');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
-    opacity:1;
+    opacity:0.85;
+}
+#desc-halfbg-text-img-text-2 .bg {
+    background-image: url('../images/bg-sign-secondary.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto;
+    opacity: 0.2;
 }

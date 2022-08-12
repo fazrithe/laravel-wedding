@@ -49,7 +49,7 @@
         <header-text-7/>
         <header-text-halfbg/>
     </headers>
-    <descriptions name="Descriptions">
+    <descriptions name="Acara">
         <desc-img-text-9/>
         <desc-img-list-3col/>
         <desc-text-img-7/>
@@ -100,63 +100,7 @@
         <desc-accordion/>
         <desc-tabs/>
     </descriptions>
-    <benefits name="Benefits">
-        <benefits-2col/>
-        <benefits-3col/>
-        <benefits-3col-3/>
-        <benefits-4col-7/>
-        <benefits-2col-3/>
-        <benefits-3col-2/>
-        <benefits-4col-5/>
-        <benefits-2col-2/>
-        <benefits-3col-9/>
-        <benefits-2col-6/>
-        <benefits-3col-7/>
-        <benefits-4col-4/>
-        <benefits-4col-3/>
-        <benefits-4col-2/>
-        <benefits-4col-6/>
-        <benefits-3col-11/>
-        <benefits-2col-9/>
-        <benefits-3col-12/>
-        <benefits-4col-8/>
-        <benefits-4col-7/>
-        <benefits-3col-5/>
-        <benefits-3col-6/>
-        <benefits-2col-counter-2/>
-        <benefits-3col-counter-3/>
-        <benefits-4col-counter-2/>
-        <benefits-3col-counter/>
-        <benefits-4col-counter/>
-        <benefits-5col-counter/>
-        <benefits-2col-counter/>
-        <benefits-3col-counter-2/>
-        <benefits-4col-counter-3/>
-        <benefits-2col-10/>
-        <benefits-2col-5/>
-        <benefits-2col-7/>
-        <benefits-2col-8/>
-        <benefits-3col-10/>
-        <benefits-3col-8/>
-        <benefits-4col/>
-        <benefits-4col-8/>
-        <benefits-6col-2/>
-        <benefits-2col-4/>
-    </benefits>
-    <text name="Text grid">
-        <text-2col-text-list/>
-        <text-1col/>
-        <text-2col/>
-        <text-3col/>
-        <text-4col/>
-        <text-2col-3/>
-        <text-3col-3/>
-        <text-4col-3/>
-        <text-2col-2/>
-        <text-3col-2/>
-        <text-4col-2/>
-    </text>
-    <galleries name="Galleries">
+    <galleries name="Galeri">
         <gallery-2col-filter/>
         <gallery-3col-filter/>
         <gallery-4col-filter/>
@@ -174,62 +118,9 @@
         <gallery-3col-4/>
         <gallery-4col/>
     </galleries>
-    <media name="Media"></media>
-    <testimonials name="Testimonials"></testimonials>
-    <clients name="Clients"></clients>
-    <team name="Team"></team>
-    <prices name="Prices"></prices>
-    <charts name="Charts"></charts>
-    <actions name="Actions"></actions>
-    <blog name="Blog"></blog>
-    <subscription name="Subscription"></subscription>
-    <contact name="Contact"></contact>
-    <separators name="Separators">
-        <sep-top-1/>
-        <sep-top-2/>
-        <sep-top-3/>
-        <sep-top-4/>
-        <sep-top-5/>
-        <sep-top-6/>
-        <sep-top-7/>
-        <sep-top-8/>
-        <sep-bottom-1/>
-        <sep-bottom-2/>
-        <sep-bottom-3/>
-        <sep-bottom-4/>
-        <sep-bottom-5/>
-        <sep-bottom-6/>
-        <sep-bottom-7/>
-        <sep-bottom-8/>
-        <sep-bottom-9/>
-        <sep-center-1/>
-        <sep-center-2/>
-        <sep-center-3/>
-        <sep-center-4/>
-        <sep-center-5/>
-    </separators>
-    <inner name="Inner page">
-        <inner-title/>
-        <inner-img/>
-        <inner-img-2/>
-        <inner-carousel/>
-        <inner-carousel-2/>
-        <inner-media/>
-        <inner-text/>
-        <inner-text-2/>
-        <inner-quote/>
-        <inner-list/>
-        <inner-post-sidebar/>
-        <inner-tags/>
-        <inner-share/>
-        <inner-follow/>
-        <inner-follow-2/>
-        <inner-comments/>
-    </inner>
-    <popups name="Modal popups"></popups>
-    <panels name="Modal panels"></panels>
-    <alerts name="Modal alerts"></alerts>
-    <cookies name="Cookie alerts"></cookies>
+    <blog name="Cerita Kita"></blog>
+    <contact name="Lokasi"></contact>
+    <testimonials name="Ucapan"></testimonials>
     <footers name="Footers">
         <footer-logo-share/>
         <footer-logo-social/>
