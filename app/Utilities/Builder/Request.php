@@ -222,7 +222,7 @@ class Request {
             chmod(base_path('public/sites').'/'.$_POST['userId'].'/'.$p_id, 0777);
         }
 
-        $output_dir = base_path('public/sites').'/'.$_POST['userId'].'/'.$p_id;
+        $output_dir = base_path('undangan').'/'.$_POST['userId'].'/'.$p_id;
 
         $file_name = $this->saveSiteToTmp($dataPost, 'sites', $_POST['userId'],$p_id );
 
@@ -1086,7 +1086,6 @@ class Request {
            <meta charset=\"UTF-8\">
            <title>$page->title</title>
            $link_favicon
-           <base href=\"$base_url\" target=\"_blank\">
            <meta name=\"keywords\" content=\"$page->meta_keywords\" />
            <meta name=\"description\" content=\"$page->meta_description\" />
            <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,viewport-fit=cover\">$fonts".''."$default_css".''."$style_gallery".''."$style_magnific

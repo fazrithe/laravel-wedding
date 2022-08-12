@@ -1,0 +1,12 @@
+#header-modal-text .bg {
+    background-image: url('../images/bg-83.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity:1;
+}#text-3col .bg {
+    background-image: url('../images/bg-sign.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    opacity: 0.1;
+}
