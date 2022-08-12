@@ -4,9 +4,53 @@
     background-position: center center;
     background-size: cover;
     opacity:1;
-}#text-3col .bg {
-    background-image: url('../images/bg-sign.png');
+}#header-text-8 .bg {
+    background-image: url('../images/bg-82.jpg');
     background-repeat: no-repeat;
-    background-position: right bottom;
-    opacity: 0.1;
+    background-position: center center;
+    background-size: cover;
+    opacity:0.75;
+}#header-text .bg {
+    background-image: url('../images/bg-46.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    opacity:0.25;
+}#header-text-2 .bg {
+    background-image: url('../images/bg-42.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    opacity:1;
+}#header-text-3 .bg {
+    background-image: url('../images/bg-60.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity:1;
+}
+#header-text-4 .bg {
+    background-image: url('../images/bg-12.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    opacity:1;
+}#header-textbox-2 .bg-wrap {
+    background-color: #ded8d0;
+}
+
+
+#header-textbox-2 .bg {
+    background-image: url('../images/bg-62.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity:1;
+}
+#header-carousel-2 .bg {
+    background-image: url('../images/bg-67.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity:1;
 }

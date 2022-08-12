@@ -5,32 +5,20 @@
         <nav-logo-menu-acc/>
         <nav-logo-menu/>
         <nav-list-logo-btn/>
-        <nav-logo-list/>
         <nav-logo-menu-2/>
         <nav-logo-menu-btn/>
         <nav-logo-menu-btn-2/>
         <nav-logo-menu-social/>
-        <nav-logo-social/>
         <nav-menu-btn/>
         <nav-menu-logo/>
         <nav-menu-logo-menu/>
         <nav-menu-logo-social/>
         <nav-menu-social/>
-        <nav-social-list/>
         <nav-menu/>
         <nav-menu-full/>
-        <nav-icon-menu/>
-        <nav-logo-megamenu/>
-        <nav-logo-megamenu-btn/>
         <nav-logo-megamenu-social/>
-        <nav-megamenu-logo-text/>
-        <nav-offcanvas-left/>
-        <nav-offcanvas-right/>
-        <nav-offcanvas-right-2/>
-        <nav-social-logo-offcanvas/>
-        <nav-logo-icon/>
     </navigations>
-    <headers name="Headers">
+    <headers name="Mempelai">
         <header-carousel-4/>
         <header-modal-text/>
         <header-text-8/>
