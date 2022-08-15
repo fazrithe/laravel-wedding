@@ -80,6 +80,11 @@ class DashboardController extends Controller
 								->where('user_id',Auth::id())
 								->orWhere('company_id',$company_id)
 									->orderBy("projects.id","desc")->get();
+			
+									$data['project_counts'] = Project::select('projects.*')
+									->where('user_id',Auth::id())
+									->orWhere('company_id',$company_id)
+										->orderBy("projects.id","desc")->count();
                
 		}
 

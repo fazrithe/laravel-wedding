@@ -264,7 +264,7 @@ class BuilderController extends Controller
 
         $project->save();
 
-        create_log('projects', $project->id, _lang('Created Project'));
+        create_log('wedding', $project->id, _lang('Created Project'));
 
 
         //Store Project Members
@@ -275,7 +275,7 @@ class BuilderController extends Controller
                 $project_member->user_id = $member;
                 $project_member->save();
 
-                create_log('projects', $project->id, _lang('Assign to').' '.$project_member->user->name);
+                create_log('wedding', $project->id, _lang('Assign to').' '.$project_member->user->name);
             }
         }
 
@@ -439,7 +439,7 @@ class BuilderController extends Controller
 
         if($project->status != $request->input('status')){
         $project->status = $request->input('status');
-            create_log('projects', $project->id, _lang('Change Project Status').' - '.ucwords(str_replace('_',' ',$project->status)));
+            create_log('wedding', $project->id, _lang('Change Project Status').' - '.ucwords(str_replace('_',' ',$project->status)));
         }
         $project->fixed_rate = $request->input('fixed_rate');
         $project->hourly_rate = $request->input('hourly_rate');
@@ -451,7 +451,7 @@ class BuilderController extends Controller
 
         $project->save();
 
-        create_log('projects', $project->id, _lang('Updated Project'));
+        create_log('wedding', $project->id, _lang('Updated Project'));
 
         $existing_members  = ProjectMember::where('project_id', $project->id)->get();
 
@@ -461,7 +461,7 @@ class BuilderController extends Controller
             foreach($existing_members as $existing_member){
                 if(! in_array($existing_member->user_id, $request->members)){
                     $project_member = ProjectMember::find($existing_member->id);
-                    create_log('projects', $project->id, _lang('Remove').' '.$project_member->user->name.' '._lang('from Project'));
+                    create_log('wedding', $project->id, _lang('Remove').' '.$project_member->user->name.' '._lang('from Project'));
                     $project_member->delete();
                 }
             }
@@ -475,7 +475,7 @@ class BuilderController extends Controller
                     $project_member->user_id = $member;
                     $project_member->save();
 
-                    create_log('projects', $project->id, _lang('Assign to').' '.$project_member->user->name);
+                    create_log('wedding', $project->id, _lang('Assign to').' '.$project_member->user->name);
                 }
 
             }
@@ -515,7 +515,7 @@ class BuilderController extends Controller
                                        ->select('project_members.*')
                                        ->first();
 
-        create_log('projects', $project_member->project_id, _lang('Removed').' '.$project_member->user->name.' '._lang('from Project'));
+        create_log('wedding', $project_member->project_id, _lang('Removed').' '.$project_member->user->name.' '._lang('from Project'));
 
         $project_member->delete();
         DB::commit();
@@ -586,7 +586,7 @@ class BuilderController extends Controller
 
         $projectfile->save();
 
-        create_log('projects', $projectfile->related_id, _lang('Uploaded File'));
+        create_log('wedding', $projectfile->related_id, _lang('Uploaded File'));
 
         //Prefix output
         $projectfile->file = '<a href="'. url('projects/download_file/'.$projectfile->file) .'">'.$projectfile->file .'</a>';
@@ -615,7 +615,7 @@ class BuilderController extends Controller
             unlink(public_path('uploads/project_files/'.$projectfile->file));
             $projectfile->delete();
 
-            create_log('projects', $id, _lang('File Removed'));
+            create_log('wedding', $id, _lang('File Removed'));
         }
 
         if(Auth::user()->user_type != 'admin'){
@@ -633,7 +633,7 @@ class BuilderController extends Controller
             unlink(public_path('uploads/project_files/'.$projectfile->file));
             $projectfile->delete();
 
-            create_log('projects', $id, _lang('File Removed'));
+            create_log('wedding', $id, _lang('File Removed'));
         }
 
         if(! $request->ajax()){
@@ -681,7 +681,7 @@ class BuilderController extends Controller
 
         $note->save();
 
-        create_log('projects', $note->related_id, _lang('Added Note'));
+        create_log('wedding', $note->related_id, _lang('Added Note'));
 
         //Prefix Output
         $note->created = '<small>'.$note->user->name.'('.$note->created_at.')<br>'.$note->note.'</small>';
@@ -707,7 +707,7 @@ class BuilderController extends Controller
             $note = \App\Note::where('id', $id)
                              ->where('company_id', company_id());
             $note->delete();
-            create_log('projects', $id, _lang('Removed Note'));
+            create_log('wedding', $id, _lang('Removed Note'));
         }
 
         if(Auth::user()->user_type != 'admin'){
@@ -723,7 +723,7 @@ class BuilderController extends Controller
 
             }
             $note->delete();
-            create_log('projects', $id, _lang('Removed Note'));
+            create_log('wedding', $id, _lang('Removed Note'));
         }
 
         if(! $request->ajax()){

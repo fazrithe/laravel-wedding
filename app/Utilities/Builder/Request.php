@@ -738,7 +738,7 @@ class Request {
             $projectfile->save();
 
 
-            create_log('projects', $projectfile->related_id, _lang('Uploaded File'));
+            create_log('wedding', $projectfile->related_id, _lang('Uploaded File'));
         }
 
         $data2 = $_POST['data2'];

@@ -80,8 +80,9 @@ class ProjectController extends Controller
     if(Auth::getUser()->company->membership_type == 'trial' && membership_validity() > date('Y-m-d')){
         $data['demo']   =   true;
     }
-
-    return view('backend.accounting.project.list');
+    $project_counts = Project::select('projects.*')
+									->where('user_id',Auth::id())->count();
+    return view('backend.accounting.project.list', compact('project_counts'));
   }
 
   public function builder()
@@ -193,7 +194,7 @@ class ProjectController extends Controller
         $project->description = $request->input('description');
         $project->save();
 
-        create_log('projects', $project->id, _lang('Created Project'));
+        create_log('wedding', $project->id, _lang('Created Project'));
 
 
         DB::commit();
@@ -416,7 +417,7 @@ class ProjectController extends Controller
         $project->description = $request->input('description');
         $project->save();
 
-        create_log('projects', $project->id, _lang('Updated Project'));
+        create_log('wedding', $project->id, _lang('Updated Project'));
 
         DB::commit();
 
@@ -444,7 +445,7 @@ class ProjectController extends Controller
                                        ->select('project_members.*')
                                        ->first();
 
-        create_log('projects', $project_member->project_id, _lang('Removed').' '.$project_member->user->name.' '._lang('from Project'));
+        create_log('wedding', $project_member->project_id, _lang('Removed').' '.$project_member->user->name.' '._lang('from Project'));
 
         $project_member->delete();
         DB::commit();
@@ -515,7 +516,7 @@ class ProjectController extends Controller
 
         $projectfile->save();
 
-        create_log('projects', $projectfile->related_id, _lang('Uploaded File'));
+        create_log('wedding', $projectfile->related_id, _lang('Uploaded File'));
 
         //Prefix output
         $projectfile->file = '<a href="'. url('projects/download_file/'.$projectfile->file) .'">'.$projectfile->file .'</a>';
@@ -544,7 +545,7 @@ class ProjectController extends Controller
             unlink(public_path('uploads/project_files/'.$projectfile->file));
             $projectfile->delete();
 
-            create_log('projects', $id, _lang('File Removed'));
+            create_log('wedding', $id, _lang('File Removed'));
         }
 
         if(Auth::user()->user_type != 'admin'){
@@ -562,7 +563,7 @@ class ProjectController extends Controller
             unlink(public_path('uploads/project_files/'.$projectfile->file));
             $projectfile->delete();
 
-            create_log('projects', $id, _lang('File Removed'));
+            create_log('wedding', $id, _lang('File Removed'));
         }
 
         if(! $request->ajax()){
@@ -610,7 +611,7 @@ class ProjectController extends Controller
 
         $note->save();
 
-        create_log('projects', $note->related_id, _lang('Added Note'));
+        create_log('wedding', $note->related_id, _lang('Added Note'));
 
         //Prefix Output
         $note->created = '<small>'.$note->user->name.'('.$note->created_at.')<br>'.$note->note.'</small>';
@@ -636,7 +637,7 @@ class ProjectController extends Controller
             $note = \App\Note::where('id', $id)
                              ->where('company_id', company_id());
             $note->delete();
-            create_log('projects', $id, _lang('Removed Note'));
+            create_log('wedding', $id, _lang('Removed Note'));
         }
 
         if(Auth::user()->user_type != 'admin'){
@@ -652,7 +653,7 @@ class ProjectController extends Controller
 
             }
             $note->delete();
-            create_log('projects', $id, _lang('Removed Note'));
+            create_log('wedding', $id, _lang('Removed Note'));
         }
 
         if(! $request->ajax()){
@@ -696,7 +697,7 @@ class ProjectController extends Controller
 
         $this->rrmdir(public_path('backend/assets/novi/projects/'.Auth::user()->id.'/'.$id));
 
-        create_log('projects', $id, _lang('File Removed'));
+        create_log('wedding', $id, _lang('File Removed'));
 
         DB::commit();
 

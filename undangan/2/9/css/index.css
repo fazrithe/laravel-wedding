@@ -1,0 +1,13 @@
+#header-text-4 .bg {
+    background-image: url('../images/bg-12.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    opacity:1;
+}#desc-halfbg-text-img-text-2 .bg {
+    background-image: url('../images/bg-sign-secondary.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto;
+    opacity: 0.2;
+}

@@ -322,7 +322,7 @@ class ClientController extends Controller
 
         $projectfile->save();
 
-        create_log('projects', $projectfile->related_id, _lang('Uploaded File'));
+        create_log('wedding', $projectfile->related_id, _lang('Uploaded File'));
 
         //Prefix output
         $projectfile->file = '<a href="'. url('projects/download_file/'.$projectfile->file) .'">'.$projectfile->file .'</a>';
@@ -360,7 +360,7 @@ class ClientController extends Controller
         unlink(public_path('uploads/project_files/'.$projectfile->file));
         $projectfile->delete();
 
-        create_log('projects', $id, _lang('File Removed'));
+        create_log('wedding', $id, _lang('File Removed'));
         
         if(! $request->ajax()){
            return back()->with('success',_lang('Removed Sucessfully'));
@@ -407,7 +407,7 @@ class ClientController extends Controller
 
         $note->save();
 
-        create_log('projects', $note->related_id, _lang('Added Note'));
+        create_log('wedding', $note->related_id, _lang('Added Note'));
 
         //Prefix Output
         $note->created = '<small>'.$note->user->name.'('.$note->created_at.')<br>'.$note->note.'</small>';
@@ -441,7 +441,7 @@ class ClientController extends Controller
         }  
                                     
         $note->delete();
-        create_log('projects', $id, _lang('Removed Note'));
+        create_log('wedding', $id, _lang('Removed Note'));
         
 
         if(! $request->ajax()){

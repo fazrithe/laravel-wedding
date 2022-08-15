@@ -16,7 +16,17 @@ $date_format = get_company_option('date_format','Y-m-d');
 
 
 <div class="alert alert-warning text-center">
-	<b>{{ _lang('You can assign a custom subdomains to display projects by changing it for each project from PROJECT SETTINGS') }}</b>
+	<b>{{ _lang('Please, Create your website') }}</b>
+</div>
+<div class="row d-flex align-items-stretch">
+	<!-- Panel 1 -->
+	<div class="col-md-12">
+	   <div class="card h-100">
+		  <div class="card-body">
+				<a href="{{ url('projects/create') }}" class="btn btn-primary">Create Your Website</a>
+			</div>
+	   </div>
+	</div>
 </div>
 
 <!--Start Card-->
@@ -25,7 +35,7 @@ $date_format = get_company_option('date_format','Y-m-d');
   <div class="col-md-12">
 	 <div class="card h-100">
 		<div class="card-body">
-		    <h4 class="header-title mt-0">{{ _lang('My Recent Websites') }}</h4>
+		    <h4 class="header-title mt-0">{{ _lang('Your Website') }}</h4>
 		    <div class="table-responsive card-scroll">
 			    <table class="table">
 				      <thead>
@@ -35,7 +45,7 @@ $date_format = get_company_option('date_format','Y-m-d');
 					    </tr>
 					</thead>
 					<tbody>
-						@foreach($projects->take(10) as $project)
+						@foreach($projects->take(4) as $project)
 						    <tr>
 								<td><a href="{{ action('ProjectController@edit', $project->id) }}">{{ $project->name }}</a></td>
 								<td>
