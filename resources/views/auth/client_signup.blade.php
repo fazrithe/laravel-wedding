@@ -55,20 +55,6 @@
 							<!--begin::Form-->
                             <form method="POST" class="kt-form" autocomplete="off" action="{{ url('register/client_signup') }}">
                                 @csrf
-
-
-                                <div class="form-group row">
-                                    <div class="col-md-12">
-                                        <input id="name" type="text" placeholder="{{ _lang('Business Name') }}" class="form-control{{ $errors->has('business_name') ? ' is-invalid' : '' }}" name="business_name" value="{{ old('business_name') }}" required autofocus>
-
-                                        @if ($errors->has('business_name'))
-                                            <span class="invalid-feedback">
-                                                <strong>{{ $errors->first('business_name') }}</strong>
-                                            </span>
-                                        @endif
-                                    </div>
-                                </div>
-
                                 <div class="form-group row">
                                     <div class="col-md-12">
                                         <input id="name" type="text" placeholder="{{ _lang('Name') }}" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
@@ -89,6 +75,21 @@
                                         @if ($errors->has('email'))
                                             <span class="invalid-feedback">
                                                 <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-6">
+                                        <input id="site" type="text" placeholder="{{ _lang('Site') }}" class="form-control" disabled value="{{ url('') }}">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input id="site" type="text" placeholder="{{ _lang('Site') }}" class="form-control{{ $errors->has('site') ? ' is-invalid' : '' }}" name="site" value="{{ old('site') }}" required autofocus>
+
+                                        @if ($errors->has('name'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('url') }}</strong>
                                             </span>
                                         @endif
                                     </div>

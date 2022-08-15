@@ -67,6 +67,7 @@
         <div id="csrf_field" class="csrf_field" style="display: none">{{ csrf_field() }}</div>
         <div id="userId" class="userId" style="display: none">{{Auth::user()->id}}</div>
         <div id="userName" class="userName" style="display: none">{{Auth::user()->name}}</div>
+        <input type="hidden" id="userSite" class="userSite" style="display: none" value="{{Auth::user()->site}}">
         <div id="project_id" class="project_id" style="display: none">0</div>
 
         <script>

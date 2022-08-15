@@ -154,9 +154,9 @@ class RegisterController extends Controller
 			
 			$validator = Validator::make($request->all(), [
 				'name' => 'required|max:191',
+                'site' => 'required|max:191',
 				'email' => 'required|email|unique:users|max:191',
 				'password' => 'required|max:20|min:6|confirmed',
-				'business_name' => 'required',
 				'package_type' => 'required',
 				'package_type' => 'required',
 				'package' => 'required',
@@ -185,8 +185,8 @@ class RegisterController extends Controller
 
             //Create Company
             $company = new Company();
-            $company->business_name = $request->business_name;
-            $company->business_name = $request->business_name;
+            $company->business_name =  $request->name;
+            $company->business_name =  $request->name;
             $company->package_id = $request->package;
             $company->package_type = $request->package_type;
             $company->membership_type = 'trial';
@@ -212,6 +212,7 @@ class RegisterController extends Controller
             }
 			$user->password = Hash::make($request->password);
             $user->user_type = 'user';
+            $user->site = $request->site;
             $user->status = 1;
             
 	        $user_language = session('user_language'); 

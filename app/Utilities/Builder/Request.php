@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Storage;
 use App\Utilities\Builder\FontsToDownload;
 use App\Utilities\Builder\Ftpuploading;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Auth;
+
 class Request {
     protected $_base_path = null;
     protected $_base_url = null;
@@ -208,7 +210,7 @@ class Request {
     {
 
         $zip = new ZipArchive();
-
+        $site = Auth::user()->site;
         if (!file_exists(base_path('public/sites'))) {
             mkdir(base_path('public/sites'), 0777, true);
             chmod(base_path('public/sites'), 0777);
@@ -222,7 +224,7 @@ class Request {
             chmod(base_path('public/sites').'/'.$_POST['userId'].'/'.$p_id, 0777);
         }
 
-        $output_dir = base_path('undangan').'/'.$_POST['userId'].'/'.$p_id;
+        $output_dir = base_path('undangan').'/'.$site.'/'.$p_id;
 
         $file_name = $this->saveSiteToTmp($dataPost, 'sites', $_POST['userId'],$p_id );
 
