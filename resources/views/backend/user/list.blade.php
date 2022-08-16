@@ -13,7 +13,7 @@
 					  <tr>
 						<th>{{ _lang('ID') }}</th>
 						<th class="text-center">{{ _lang('Avatar') }}</th>
-						<th>{{ _lang('Business Name') }}</th>
+						<th>{{ _lang('URL Site') }}</th>
 						<th>{{ _lang('Email') }}</th>
 						<th>{{ _lang('Package') }}</th>
 						<th class="text-center">{{ _lang('Membership') }}</th>
@@ -31,7 +31,7 @@
 							</td>
 							<td class='name'>{{ $user->company->business_name }}</td>
 							<td class='email'>{{ $user->email }}</td>					
-							<td class='package_id'>{{ $user->company->package->package_name }}({{ ucwords($user->company->package_type) }})</td>
+							<td class='package_id'>{{ $user->site }}({{ ucwords($user->company->package_type) }})</td>
 							<td class='membership_type text-center'>{!! $user->company->membership_type == 'trial' ? clean(status(ucwords($user->company->membership_type), 'danger')) : clean(status(ucwords($user->company->membership_type), 'success')) !!}</td>					
 							<td class='status'>{!! $user->company->status == 1 ? clean(status(_lang('Active'), 'success')) : clean(status(_lang('In-Active'), 'danger')) !!}</td>					
 							<td class="text-center">

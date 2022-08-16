@@ -52,7 +52,7 @@
                                         </tr>
                                         <tr>
                                             <td colspan="4" style="text-align: left;background: #fff000;padding: 10px;color: #000;border: 1px solid #ccc;">
-                                                {{ _lang("It’s recommend to login with user account if you want to test the builder, because default admin account is for the general mangament, manage users and packages.")}}
+                                                It’s recommend to login with user account if you want to test the builder, because default admin account is for the general mangament, manage users and packages
                                             </td>
                                         </tr>
                                         <tr>

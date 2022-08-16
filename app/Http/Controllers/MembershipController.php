@@ -85,7 +85,7 @@ class MembershipController extends Controller
 		$payment->company_id = company_id();
 		$payment->title = $data['title'];
 		$payment->method = "";
-		$payment->currency = get_option('currency','USD');
+		$payment->currency = get_option('currency','IDR');
 		$payment->amount = $data['amount'];
 		$payment->package_id = $package->id;
 		$payment->package_type = $request->package_type;
@@ -108,8 +108,8 @@ class MembershipController extends Controller
 			          'name' => $data['title'],
 			          'description' => $data['title'],
 			       ],
-			      'unit_amount' =>   round(convert_currency(get_option('currency','USD'), get_option('stripe_currency','USD'), ($data['amount'] * 100))),
-			      'currency' 	=>   get_option('stripe_currency','USD'),
+			      'unit_amount' =>   round(convert_currency(get_option('currency','IDR'), get_option('stripe_currency','IDR'), ($data['amount'] * 100))),
+			      'currency' 	=>   get_option('stripe_currency','IDR'),
 			    ],
 			    'quantity' => 1,
 			  ]],
@@ -127,7 +127,7 @@ class MembershipController extends Controller
 
 			$orderData = [
 			    'receipt'         => $payment->id,
-			    'amount'          => round(convert_currency(get_option('currency','USD'), 'INR',($data['amount'] * 100))),
+			    'amount'          => round(convert_currency(get_option('currency','IDR'), 'INR',($data['amount'] * 100))),
 			    'currency'        => 'INR',
 			    'payment_capture' => 1 // auto capture
 			];
@@ -161,7 +161,7 @@ class MembershipController extends Controller
 
 		$payment_id = $request->item_number;
 		//$amount = $request->mc_gross;
-		$amount = convert_currency(get_option('paypal_currency','USD'), get_option('currency','USD'), $request->mc_gross);
+		$amount = convert_currency(get_option('paypal_currency','IDR'), get_option('currency','IDR'), $request->mc_gross);
 		 
 		$payment = PaymentHistory::find($payment_id);
 		//$increment = $payment->extend;
@@ -236,7 +236,7 @@ class MembershipController extends Controller
 
         $payment = PaymentHistory::find($payment_id);
 
-        if($session->amount_total != round(convert_currency(get_option('currency','USD'), get_option('stripe_currency','USD'), ($payment->amount * 100)))){
+        if($session->amount_total != round(convert_currency(get_option('currency','IDR'), get_option('stripe_currency','IDR'), ($payment->amount * 100)))){
 			return redirect('/dashboard')->with('error', _lang('illegal Operation !'));
 		}
 		
@@ -413,7 +413,7 @@ class MembershipController extends Controller
 
 		$charge = json_decode($response);
 
-		if($charge->data->amount != round(convert_currency(get_option('currency','USD'), get_option('paystack_currency','GHS'),($payment->amount * 100)))){
+		if($charge->data->amount != round(convert_currency(get_option('currency','IDR'), get_option('paystack_currency','GHS'),($payment->amount * 100)))){
 			return redirect('/dashboard')->with('error', _lang('illegal Operation !'));
 		}
 		

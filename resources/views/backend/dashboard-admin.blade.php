@@ -5,7 +5,7 @@
 
 @if(env('DEMO_MODE') == true)
 <div class="alert alert-warning text-center">
-	<b>{{ _lang("It’s recommend to login with user account if you want to test the builder, because default admin account is for the general mangament, manage users and packages.")}}</b>
+	<b>It’s recommend to login with user account if you want to test the builder, because default admin account is for the general mangament, manage users and packages
 </div>
 @endif
 
@@ -73,7 +73,7 @@
 						<thead class="thead-light">
 							<tr>
 								<th>{{ _lang('Name') }}</th>
-								<th>{{ _lang('Company') }}</th>
+								<th>{{ _lang('Site') }}</th>
 								<th>{{ _lang('Email') }}</th>
 								<th>{{ _lang('Package') }}</th>
 								<th class="text-center">{{ _lang('Membership') }}</th>
@@ -95,7 +95,7 @@
 										</td>
 										<td class='company'>{{ $user->company->business_name }}</td>			
 										<td class='email'>{{ $user->email }}</td>			
-										<td class='package_id'>{{ $user->company->package->package_name }}({{ ucwords($user->company->package_type) }})</td>						
+										<td class='package_id'>{{ $user->site }}({{ ucwords($user->company->package_type) }})</td>						
 										<td class='membership_type text-center'>{!! $user->company->membership_type == 'trial' ? clean(status(ucwords($user->company->membership_type), 'danger')) : clean(status(ucwords($user->company->membership_type), 'success')) !!}</td>		
 										<td class="text-center">
 										<a href="{{ action('UserController@show', $user['id'])}}" data-title="{{ $user->name }}" class="btn btn-primary btn-xs ajax-modal">{{ _lang('View') }}</a>

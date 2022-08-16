@@ -83,7 +83,7 @@ class PaymentController extends Controller
 		$payment->company_id = $company->id;
 		$payment->title = "Buy {$package->package_name} Package";
 		$payment->method = "Offline";
-		$payment->currency = get_option('currency','USD');
+		$payment->currency = get_option('currency','IDR');
 		
 		if($request->package_type == 'monthly'){
 		    $payment->amount = $package->cost_per_month;

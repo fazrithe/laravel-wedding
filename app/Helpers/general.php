@@ -421,7 +421,7 @@ if ( ! function_exists('g_decimal_place'))
 	
 	
 	if($base_currency == ''){
-		$base_currency = get_option('currency','USD');
+		$base_currency = get_option('currency','IDR');
 		\Cache::put('base_currency',$base_currency);
 	}
 	
@@ -556,7 +556,7 @@ if (!function_exists('money_format_2')) {
 		if (array_key_exists($curr,$currencies)){
 			return number_format($floatcurr, $currencies[$curr][0], $currencies[$curr][1], $currencies[$curr][2]);
 		}else{
-			return number_format($floatcurr, $currencies['USD'][0], $currencies['USD'][1], $currencies['USD'][2]); 
+			return number_format($floatcurr, $currencies['IDR'][0], $currencies['IDR'][1], $currencies['USD'][2]); 
 		}
 		
 	}
@@ -747,7 +747,7 @@ if ( ! function_exists('currency')){
 	function currency($currency = '')
 	{ 
 		if($currency == ''){
-			$currency = get_company_option( 'base_currency', get_option('currency','USD') );
+			$currency = get_company_option( 'base_currency', get_option('currency','IDR') );
 		}
 		
 		return html_entity_decode(get_currency_symbol( $currency ), ENT_QUOTES, 'UTF-8');
@@ -759,7 +759,7 @@ if ( ! function_exists('currency')){
 if ( ! function_exists('base_currency')){
 	function base_currency()
 	{ 
-		$currency = get_company_option( 'base_currency', get_option('currency','USD') );
+		$currency = get_company_option( 'base_currency', get_option('currency','IDR') );
 		return $currency;
 	}
 }

@@ -18,22 +18,7 @@
 			   <input type="text" class="form-control" name="name" value="{{ $project->name }}" required>
 			</div>
 		</div>
-
-		<div class="col-md-12">
-			<div class="form-group">
-				<label class="control-label">{{ _lang('Subdomain') }}</label>
-				<div class="input-group mb-3">
-					<input type="text" class="form-control" name="custom_domain" value="{{ $project->custom_domain }}" @if(env('DEMO_MODE') == true) disabled @endif>
-					<div class="input-group-append">
-						<span class="input-group-text" id="basic-addon2">.{{ config('app.short_url') }}</span>
-					</div>
-				</div>
-        		@if(env('DEMO_MODE') == true)
-					<span class="required">{{ _lang("UNFORTUNATELY IT'S NOT ALLOWED AT DEMO MODE!")}}</span>
-				@endif
-			</div>
-		</div>
-
+		
 		<div class="col-md-12">
 			<div class="form-group">
 			   <label class="control-label">{{ _lang('Description') }}</label>						

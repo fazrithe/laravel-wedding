@@ -4747,8 +4747,8 @@ section.parallax .row .background-image-holder {
   font-family: 'Open Sans', 'Roboto', 'Helvetica', Sans-Serif;
 }
 .bar .logo {
-  max-height: 1.85714286em;
-  max-width: none;
+  max-height: 50px;
+  max-width: 50px;
 }
 .menu-horizontal > li > a,
 .menu-horizontal > li > .modal-instance > a {
