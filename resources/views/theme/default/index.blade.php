@@ -57,7 +57,7 @@
 
 
             <div class="row pricing-content">
-                @php $currency = currency(get_option('currency','USD')); @endphp
+                @php $currency = currency(get_option('currency','IDR')); @endphp
                 
                 @foreach(\App\Package::all() as $package)
                     <div class="col-md-4 monthly-package">
