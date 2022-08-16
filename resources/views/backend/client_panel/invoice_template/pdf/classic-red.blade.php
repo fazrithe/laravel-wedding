@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>{{ get_option('site_title', 'LaraBuilder Invoice') }}</title>
+<title>{{ get_option('site_title', 'Momenbahagia') }}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">

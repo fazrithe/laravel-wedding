@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{{ get_option('website_title','LaraBuilder') }}</title>
+        <title>{{ get_option('website_title','Momenbahagia') }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="{{ get_option('meta_keywords') }}"/>
         <meta name="description" content="{{ get_option('meta_description') }}"/>
@@ -11,7 +11,7 @@
         <meta name="og:type" content="website"/>
         <meta name="og:url" content="{{ url('') }}"/>
         <meta name="og:image" content="{{ asset('public/images/meta-image.png') }}"/>
-        <meta name="og:site_name" content="{{ get_option('website_title','LaraBuilder') }}"/>
+        <meta name="og:site_name" content="{{ get_option('website_title','Momenbahagia') }}"/>
         <meta name="og:description" content="{{ get_option('meta_description') }}"/>
 
         <link rel="shortcut icon" href="{{ get_favicon() }}">

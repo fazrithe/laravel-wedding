@@ -320,7 +320,7 @@
 							<div class="col-md-12">
 								<div class="form-group">
 								<label class="control-label">{{ _lang('Website Title') }}</label>						
-								<input type="text" class="form-control" name="website_title" value="{{ get_option('website_title','LaraBuilder') }}">
+								<input type="text" class="form-control" name="website_title" value="{{ get_option('website_title','Momenbahagia') }}">
 								</div>
 							</div>
 							

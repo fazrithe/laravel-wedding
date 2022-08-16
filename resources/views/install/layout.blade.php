@@ -8,7 +8,7 @@
 		<!-- CSRF Token -->
 		<meta name="csrf-token" content="{{ csrf_token() }}">
 
-		<title>LaraBuilder Installation</title>
+		<title>Momenbahagia Installation</title>
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 
